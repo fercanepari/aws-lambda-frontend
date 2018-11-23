@@ -1,28 +1,36 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import PostItem from './views/PostItem';
+import PostItemSimple from './views/PostItemSimple';
+import ShoppingList from './views/ShoppingList';
+//import Home from './views/Home';
+import Header from './views/Header';
+import {BrowserRouter, Route} from 'react-router-dom';
 
 class App extends Component {
+  
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <BrowserRouter>
+        <div>
+        <Header /> 
+          <Route exact={true} path='/postItem' render={() => (
+            <div className="App">
+              <PostItem />
+            </div>
+          )}/>
+          <Route exact={true} path='/postItemsimple' render={() => (
+            <div className="App">
+              <PostItemSimple />
+            </div>
+          )}/>
+          <Route exact={true} path='/shoppingList' render={() => (
+            <div className="App">
+              <ShoppingList />
+            </div>
+          )}/>
+        </div>
+      </BrowserRouter>
     );
   }
 }
-
 export default App;
