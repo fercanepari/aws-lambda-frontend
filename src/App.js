@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PostItem from './views/PostItem';
 import PostItemSimple from './views/PostItemSimple';
 import ShoppingList from './views/ShoppingList';
-//import Home from './views/Home';
+import Formk from './views/Formk';
 import Header from './views/Header';
 import {BrowserRouter, Route} from 'react-router-dom';
 
@@ -26,6 +26,11 @@ class App extends Component {
           <Route exact={true} path='/shoppingList' render={() => (
             <div className="App">
               <ShoppingList />
+            </div>
+          )}/>
+          <Route exact={true} path='/Formk' render={() => (
+            <div className="App">
+              <Formk />
             </div>
           )}/>
         </div>

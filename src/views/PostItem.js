@@ -16,7 +16,7 @@ export default class PostItem extends Component {
         event.preventDefault();
         
         var postData = {
-            'Name': 'test',
+            'Name': 'test88',
             'Quantity': '3'
           };
           
@@ -28,6 +28,7 @@ export default class PostItem extends Component {
             }
           };
           
+          //http://localhost:60158/v1/shoppingList
           axios.post('http://localhost:60158/v1/shoppingList/', postData, axiosConfig)
           .then((res) => {
             console.log("RESPONSE RECEIVED: ", res);
