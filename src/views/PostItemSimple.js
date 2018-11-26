@@ -46,7 +46,7 @@ export default class PostItemSimple extends Component {
             <br></br>
             <label>
               Quantity:
-              <input type="text" name="quantity" onChange={this.handleQtyChange}></input>
+              <input type="number" name="quantity" onChange={this.handleQtyChange}></input>
             </label><br></br>
             <br></br>
             <button type="submit">Send</button>
