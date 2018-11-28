@@ -5,13 +5,14 @@ import ShoppingList from './views/ShoppingList';
 import Formk from './views/Formk';
 import Header from './views/Header';
 import {BrowserRouter, Route} from 'react-router-dom';
+import DemoCarousel from './views/DemoCarousel';
 
 class App extends Component {
   
   render() {
     return (
       <BrowserRouter>
-        <div>
+        <div id='body'>
         <Header /> 
           <Route exact={true} path='/postItem' render={() => (
             <div className="App">
@@ -33,6 +34,11 @@ class App extends Component {
               <Formk />
             </div>
           )}/>
+          <Route exact={true} path='/Democarousel' render={() => (
+            <div className="App" id="demo-carousel">
+              <DemoCarousel></DemoCarousel>
+            </div>
+          )}/>         
         </div>
       </BrowserRouter>
     );

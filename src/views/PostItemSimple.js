@@ -18,7 +18,7 @@ export default class PostItemSimple extends Component {
     handleSubmit = event =>{
       event.preventDefault();
 
-    //Optional values  
+    //Alternative values  
     //http://localhost:60158/v1/shoppingList
     //https://0ni5h012ze.execute-api.sa-east-1.amazonaws.com/Prod/v1/shoppingList
     axios.post('https://0ni5h012ze.execute-api.sa-east-1.amazonaws.com/Prod/v1/shoppingList',

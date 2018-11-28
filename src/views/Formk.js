@@ -2,6 +2,7 @@ import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 //import { Formik, FormikProps, Form, Field, ErrorMessage } from 'formik';
 import axios from "axios";
+import ReactDOM from 'react-dom';
 
 export default class Formk extends React.Component {
   
@@ -73,3 +74,5 @@ export default class Formk extends React.Component {
      />);
    }
 }
+
+ReactDOM.render(<Formk />, document.getElementById('body'));

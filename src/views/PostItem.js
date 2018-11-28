@@ -44,7 +44,7 @@ export default class PostItem extends Component {
       
        render () {
         return (
-            <div id="signup">
+            <div id="postItem">
             <form onSubmit={this.handleSubmit}>
                 <input ref={(ref) => {this.name = ref}} placeholder="Name" type="text" name="name"/><br />
                 <input ref={(ref) => {this.quantity = ref}} placeholder="Quantity" type="text" name="quantity"/><br />

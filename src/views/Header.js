@@ -16,6 +16,7 @@ export default class Header extends Component {
         const postSimple = this.state.location === "postSimple" ? "active" : "";
         const post = this.state.location === "post" ? "active" : "";
         const formk = this.state.location === "formk" ? "active" : "";
+        const carousel = this.state.location === "carousel" ? "active" : "";
         
         return (
             <div id='container' className="topnav">
@@ -27,8 +28,10 @@ export default class Header extends Component {
                 <Link className={postSimple} to="PostItemSimple" onClick={() => this.setState({location: 'postSimple'})} >Post Simple</Link>   
                 <Link className={post} to="PostItem" onClick={() => this.setState({location: 'post'})} >Post</Link> 
                 <Link className={formk} to="Formk" onClick={() => this.setState({location: 'formk'})} >Form</Link>   
-            
+                <Link className={carousel} to="Carousel" onClick={() => this.setState({location: 'carousel'})} >Carousel</Link>  
+                
             </div>
+            
         )
     }
 }
