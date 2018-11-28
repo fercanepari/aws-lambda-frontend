@@ -14,10 +14,10 @@ export default class Header extends Component {
 
         const list = this.state.location === "list" ? "active" : "";
         const postSimple = this.state.location === "postSimple" ? "active" : "";
-        const post = this.state.location === "post" ? "active" : "";
+        //const post = this.state.location === "post" ? "active" : "";
         const formk = this.state.location === "formk" ? "active" : "";
         const carousel = this.state.location === "carousel" ? "active" : "";
-        
+        //<Link className={post} to="PostItem" onClick={() => this.setState({location: 'post'})} >Post</Link> 
         return (
             <div id='container' className="topnav">
                 <header className="App-header">
@@ -25,8 +25,7 @@ export default class Header extends Component {
                     <h1 className="App-title">AWS Lambda function</h1>
                 </header>
                 <Link className={list} to="ShoppingList" onClick={() => this.setState({location: 'list'})} >List</Link>
-                <Link className={postSimple} to="PostItemSimple" onClick={() => this.setState({location: 'postSimple'})} >Post Simple</Link>   
-                <Link className={post} to="PostItem" onClick={() => this.setState({location: 'post'})} >Post</Link> 
+                <Link className={postSimple} to="PostItemSimple" onClick={() => this.setState({location: 'postSimple'})} >Post Simple</Link>                   
                 <Link className={formk} to="Formk" onClick={() => this.setState({location: 'formk'})} >Form</Link>   
                 <Link className={carousel} to="Carousel" onClick={() => this.setState({location: 'carousel'})} >Carousel</Link>  
                 
