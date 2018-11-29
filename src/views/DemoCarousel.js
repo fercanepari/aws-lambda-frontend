@@ -8,7 +8,7 @@ export default class DemoCarousel extends Component {
         return (
             <div>
                 
-            <Carousel>
+            <Carousel autoPlay interval={4000} infiniteLoop showThumbs={false}>
                 <div>
                     <img src="https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg" alt="" />
                     <p className="legend">React</p>
@@ -20,6 +20,9 @@ export default class DemoCarousel extends Component {
                 <div>
                     <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg" alt=""  />
                     <p className="legend">Axios</p>
+                </div>
+                <div>
+                    <iframe title="vid_1" src="https://www.youtube.com/embed/n0F6hSpxaFc" />
                 </div>
             </Carousel>
             </div>
