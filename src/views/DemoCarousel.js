@@ -6,7 +6,8 @@ import ReactDOM from 'react-dom';
 export default class DemoCarousel extends Component {
     render() {
         return (
-          <div className="App">
+            <div>
+                
             <Carousel>
                 <div>
                     <img src="https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg" alt="" />
@@ -21,10 +22,9 @@ export default class DemoCarousel extends Component {
                     <p className="legend">Axios</p>
                 </div>
             </Carousel>
-          </div>
-          
+            </div>
         );
     }
-};
-
-ReactDOM.render(<DemoCarousel />, document.getElementById('body'));
+}
+   
+ReactDOM.render(<DemoCarousel />, document.getElementById('carousel'));

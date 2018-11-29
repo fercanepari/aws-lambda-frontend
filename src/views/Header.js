@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import logo from '../logo.svg';
 import { Link } from "react-router-dom";
+import ReactDOM from 'react-dom';
+import DemoCarousel from './DemoCarousel';
 
 export default class Header extends Component {
     constructor(props) {
@@ -18,6 +20,15 @@ export default class Header extends Component {
         const formk = this.state.location === "formk" ? "active" : "";
         const carousel = this.state.location === "carousel" ? "active" : "";
         //<Link className={post} to="PostItem" onClick={() => this.setState({location: 'post'})} >Post</Link> 
+        
+        if(carousel !== "active"){
+            //Clear the carousel div on index.html page if the selected menu is anotherone
+            ReactDOM.render(<div></div>, document.getElementById('carousel')); 
+        }
+        else{
+            ReactDOM.render(<DemoCarousel/>, document.getElementById('carousel')); 
+        }
+
         return (
             <div id='container' className="topnav">
                 <header className="App-header">

@@ -75,4 +75,4 @@ export default class Formk extends React.Component {
    }
 }
 
-ReactDOM.render(<Formk />, document.getElementById('body'));
+ReactDOM.render(<div></div>, document.getElementById('carousel')); 

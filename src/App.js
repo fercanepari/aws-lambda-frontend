@@ -35,10 +35,10 @@ class App extends Component {
             </div>
           )}/>
           <Route exact={true} path='/Democarousel' render={() => (
-            <div className="App" id="demo-carousel">
-              <DemoCarousel></DemoCarousel>
+            <div className="App">
+              <DemoCarousel/>
             </div>
-          )}/>         
+          )}/>        
         </div>
       </BrowserRouter>
     );
